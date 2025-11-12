@@ -58,4 +58,23 @@ To run this project locally, you'll need [Node.js](https://nodejs.org/) and a pa
     -   **Red Bots**: -1 point
 4.  Your final score will be displayed, and the top 5 scores are saved to the leaderboard.
 
+## Deployment to GitHub Pages
+
+This project includes a script to make deploying to GitHub Pages easy.
+
+1.  **Run the deployment script:**
+    ```bash
+    npm run deploy
+    ```
+    This command will first build the project and then push the contents of the `dist` directory to a special `gh-pages` branch on your GitHub repository.
+
+2.  **Configure GitHub Pages:**
+    - Go to your repository's settings on GitHub.
+    - Navigate to the "Pages" section.
+    - Under "Build and deployment", set the **Source** to **Deploy from a branch**.
+    - Set the **Branch** to `gh-pages` and the folder to `/ (root)`.
+    - Click "Save".
+
+Your site should be live at the URL provided by GitHub Pages within a few minutes.
+
 Have fun!
