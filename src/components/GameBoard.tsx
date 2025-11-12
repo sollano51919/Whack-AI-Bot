@@ -17,7 +17,8 @@ const GameBoard: React.FC<GameBoardProps> = ({ endGame }) => {
   const [activeBot, setActiveBot] = useState<ActiveBot | null>(null);
   const [hitEffect, setHitEffect] = useState<{ key: number, holeIndex: number, points: number } | null>(null);
 
-  const gameLoopTimeoutRef = useRef<number>();
+  // FIX: The useRef hook requires an initial value.
+  const gameLoopTimeoutRef = useRef<number | undefined>(undefined);
   const activeBotRef = useRef<ActiveBot | null>(null);
   activeBotRef.current = activeBot;
   
